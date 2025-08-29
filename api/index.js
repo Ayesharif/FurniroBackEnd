@@ -1,7 +1,7 @@
-import adminAuthRoutes from './routers/adminRouter/adminAuthRouter.js'
-import adminRoutes from './routers/adminRouter/adminActivityRouter.js'
+import adminAuthRoutes from '../routers/adminRouter/adminAuthRouter.js'
+import adminRoutes from '../routers/adminRouter/adminActivityRouter.js'
 import express from 'express'
-import {client} from './dbConfig.js'
+import {client} from '../dbConfig.js'
 import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser'
 import jwt from 'jsonwebtoken'
@@ -50,3 +50,4 @@ app.use(adminRoutes);
 app.listen(port, () => {
     console.log("Server running at http://localhost:3000");
 });
+export default app;
