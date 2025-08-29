@@ -17,9 +17,15 @@ try {
 
 const app = express();
 const port = process.env.PORT||3000
+
+app.get("/", (req, res) => {
+  res.send("✅ API is live on Vercel!");
+});
+
 console.log("MONGO_URI:", process.env.MONGODB_URI ? "✅ Found" : "❌ Missing");
 app.use(express.json());
 app.use(cookieParser());
+
 
 app.use(adminAuthRoutes);
 
