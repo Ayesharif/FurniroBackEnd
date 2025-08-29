@@ -17,7 +17,7 @@ try {
 
 const app = express();
 const port = process.env.PORT||3000
-
+console.log("MONGO_URI:", process.env.MONGODB_URI ? "✅ Found" : "❌ Missing");
 app.use(express.json());
 app.use(cookieParser());
 

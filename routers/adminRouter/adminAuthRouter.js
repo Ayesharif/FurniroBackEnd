@@ -3,6 +3,8 @@ import { client } from '../../dbConfig.js';
 import { ObjectId } from 'mongodb';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import dotenv from "dotenv";
+dotenv.config();
 
 const router = express.Router();
 const myDB = client.db("myEcommerce");
